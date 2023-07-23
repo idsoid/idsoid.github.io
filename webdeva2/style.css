@@ -1,5 +1,50 @@
-h1 {
-    background-color: aqua;
+* {
+    text-align: center;
+    box-sizing: border-box;
+    font-family: Verdana, 'Times New Roman', Times, serif;
+}
+body {
+    background-color: blanchedalmond;
+    background-image: url("images/haikei.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#indexHead {
     display: flex;
+    background-color: blanchedalmond;
+    margin-left: none;
+    margin-right: none;
+}
+#logo{
+    margin-left: 1.5em;
+}
+h1 {
     justify-content: center;
+    padding-top: 1.5em;
+}
+nav {
+    text-decoration: none;
+    background-color: blanchedalmond;
+}
+nav > ul {
+    list-style-type: none;
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+}
+nav > ul > li {
+    display: inline-block;
+    margin-top: 1em;
+    margin-bottom: 0;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+nav > ul > li > a:hover {
+    color: lightcoral;
+}
+a {
+    color: skyblue;
+}
+a:visited {
+    color: skyblue;
 }
