@@ -9,7 +9,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.indexHead {
+#indexHead {
     display: flex;
     background-color: skyblue;
     margin-left: none;
@@ -21,6 +21,14 @@ body {
 h1 {
     justify-content: center;
     padding-top: 1.5em;
+}
+#hamIcon {
+    display:none;
+}
+#menuList {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 nav {
     text-decoration: none;
@@ -45,6 +53,27 @@ nav > ul > li > a:hover {
 a {
     color: blanchedalmond;
 }
-a:visited {
-    color: blanchedalmond;
+
+@media screen and (max-width:800px) {
+    #titlenav{
+        padding-left: 10em;
+    }
+    nav > ul {
+        justify-content: center;
+        display: none;
+    }
+    nav > ul > li {
+        display: inline-block;
+    }
+    #hamIcon {
+        justify-content: center;
+        display: inline-block;
+    }
+}
+#menuList.menuShow{
+    display: block;
+}
+#titlenav.menuOpen{
+    padding-top: 0em;
+    padding-left: 1.5em;
 }
