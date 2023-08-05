@@ -33,7 +33,6 @@ tbutton.addEventListener("click", function () {
 //Menu
 function toggleMenus() {
     menuItemsList.classList.toggle("menuShow");
-    titlenav.classList.toggle("menuOpen");
 }
 hamBtn.addEventListener("click",toggleMenus);
 

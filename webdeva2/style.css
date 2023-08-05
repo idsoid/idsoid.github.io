@@ -6,7 +6,7 @@
 body {
     background-color: blanchedalmond;
     background-image: url("images/haikei.png");
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: cover;
 }
 #indexHead {
@@ -25,11 +25,6 @@ h1 {
 #hamIcon {
     display:none;
 }
-#menuList {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
 nav {
     text-decoration: none;
     background-color: skyblue;
@@ -43,7 +38,7 @@ nav > ul {
 nav > ul > li {
     display: inline-block;
     margin-top: 1em;
-    margin-bottom: 0;
+    margin-bottom: 1em;
     margin-left: 10em;
     margin-right: 10em;
 }
@@ -55,25 +50,33 @@ a {
 }
 
 @media screen and (max-width:800px) {
-    #titlenav{
-        padding-left: 10em;
+    #indexHead {
+        display: grid;
+    }
+    #logo {
+        display: block;
+        margin: auto;
+    }
+    h1 {
+        margin-top: 0;
+        padding-top: 0;
     }
     nav > ul {
-        justify-content: center;
         display: none;
+        margin-top: 0;
     }
     nav > ul > li {
-        display: inline-block;
+        display: block;
     }
     #hamIcon {
-        justify-content: center;
         display: inline-block;
+    }
+    #menuList {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
     }
 }
 #menuList.menuShow{
     display: block;
-}
-#titlenav.menuOpen{
-    padding-top: 0em;
-    padding-left: 1.5em;
 }
