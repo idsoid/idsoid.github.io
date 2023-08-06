@@ -3,7 +3,6 @@ var mbutton = document.querySelector("#mbutton");
 var tbutton = document.querySelector("#tbutton");
 var allpages = document.querySelectorAll(".page");
 var menuItemsList = document.querySelector("nav ul");
-var titlenav = document.querySelector("#titlenav");
 var hamBtn = document.querySelector("#hamIcon");
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
@@ -40,10 +39,10 @@ function toggleMenus() {
 hamBtn.addEventListener("click",toggleMenus);
 
 //Collapse/Expand
-var animateTimer;
 var collapsibles = document.getElementsByClassName("collapse");
 var i;
 for (i = 0; i < collapsibles.length; i++) {
+	var animateTimer;
     collapsibles[i].addEventListener("click", function() {
         var content = this.nextElementSibling;
         if (content.style.maxHeight) {
@@ -136,8 +135,7 @@ function Quiz(questions, quizContainer, resultsContainer, submitButton){
 			}
 
 			output.push(
-				'<div class="question">' + questions[i].question + '</div>'
-				+ '<div class="answers">' + answers.join('') + '</div>'
+				'<div class="question">' + questions[i].question + '</div>' + '<div class="answers">' + answers.join('') + '</div>'
 			);
 		}
 
@@ -166,5 +164,5 @@ function Quiz(questions, quizContainer, resultsContainer, submitButton){
 	showQuestions(questions, quizContainer);
 	submitButton.onclick = function(){
 		showResults(questions, quizContainer, resultsContainer);
-	}
+	};
 }
